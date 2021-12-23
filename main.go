@@ -19,10 +19,10 @@ var collection = helper.ConnectDB()
 func main() {
 
 	//Init Router
-	r := mux.NewRouter()
+	r := mux.NewRouter().
 
-	// arrange our route
-	r.HandleFunc("/api/books", getBooks).Methods("GET")
+		// arrange our route
+		r.HandleFunc("/api/books", getBooks).Methods("GET")
 	// r.HandleFunc("/api/books/{id}", getBook).Methods("GET")
 	r.HandleFunc("/api/books", createBook).Methods("POST")
 	// r.HandleFunc("/api/books/{id}", updateBook).Methods("PUT")
