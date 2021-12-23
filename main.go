@@ -46,7 +46,7 @@ func getBooks(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Close the cursor once finished
+	// Close the cursor once finished.
 	/*A defer statement defers the execution of a function until the surrounding function returns.
 	simply, run cur.Close() process but after cur.Next() finished.*/
 	defer cur.Close(context.TODO())
